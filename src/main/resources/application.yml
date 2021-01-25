@@ -1,0 +1,55 @@
+server:
+    port: 9090
+    
+# ===============================
+  # database configurations
+# ===============================ß      
+spring:
+    datasource:
+        driver-class-name: com.mysql.cj.jdbc.Driver
+        url: jdbc:mysql://localhost:3306/emp_mgmt_db
+        username: root
+        password: root
+    jpa:
+        database-platform: org.hibernate.dialect.MySQL5Dialect
+        generate-ddl: true
+        hibernate:
+            ddl-auto: update
+            
+# ===============================
+  # Actuator configurations
+# ===============================ß           
+management:
+    endpoints:
+        web:
+            exposure:
+                include:
+                    - "*"
+ 
+info :
+   application :
+      name: Employee Management demo application.
+      description : This project contains spring boot all features.
+      artifact : spring-boot 2.x
+      version :   1.0
+   Technologies Used:   
+      java:   1.8
+      database:   MysqlDB
+      UI:   Angular
+   
+   
+# ===============================
+  #  SMTP mail configurations
+# ===============================ß  
+mail :
+   host : smtp.gmail.com
+   port : 587
+   username : ravindra
+   password : aaa
+   properties :
+      mail :
+         smtp :
+            auth : true 
+            starttls : 
+               enable :  true 
+ 

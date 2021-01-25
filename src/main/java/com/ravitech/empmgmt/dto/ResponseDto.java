@@ -26,6 +26,7 @@ public class ResponseDto{
 	private String message;
 	private Object values;
 	private Object data;
+	private Integer code;
 	private HttpStatus status;
 
 	public ResponseDto() {
